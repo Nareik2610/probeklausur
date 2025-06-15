@@ -9,5 +9,13 @@
 Node* Node::min_node()
 {
     // TODO
-    return nullptr;
+    Node* el= this;
+    if(is_empty())
+    {
+        return nullptr;
+    }
+    while (!el->left->is_empty()){
+        el = el->left;
+    }
+    return el;
 }
