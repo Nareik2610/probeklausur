@@ -25,12 +25,15 @@ bool same_elements(std::vector<int> a, std::vector<int> b)
     b.erase(l2, b.end());
 
 
-    if(a.size()==b.size()){
-        for (int i=0; i< a.size(); i++){
-            if (a[i]==b[i]){
-                return true;
-            }
-        }
+    if(a.size()!=b.size()){
+        return false;
     }
-    return false;
+    for (int i=0; i< a.size(); i++){
+         if (a[i]!=b[i]){
+           return false;
+        } 
+    }
+    
+    
+    return true;
 }
